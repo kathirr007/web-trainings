@@ -5,6 +5,12 @@ css: unocss
 colorSchema: dark
 transition: fade-out
 download: true
+export:
+  format: pdf
+  timeout: 100000
+  dark: false
+  withClicks: false
+  withToc: false
 ---
 
 <h1 flex="~ col">
