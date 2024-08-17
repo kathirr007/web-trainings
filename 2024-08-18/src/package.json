@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /2023/nuxt-devtools-strasbourg/ --out ../../dist/2023/nuxt-devtools-strasbourg",
+    "export": "slidev export --per-slide --output ../2024-08-18-vue-js-training.pdf"
+  }
+}
