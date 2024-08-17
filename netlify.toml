@@ -1,0 +1,68 @@
+[build]
+publish = "dist"
+command = "pnpm run build"
+
+[build.environment]
+NODE_VERSION = "20"
+PLAYWRIGHT_BROWSERS_PATH = "0"
+
+[[redirects]]
+from = "/2023/nuxt-devtools/*"
+to = "/2023/nuxt-devtools/index.html"
+status = 200
+
+[[redirects]]
+from = "/2023/github-notifications/pdf"
+to = "https://github.com/antfu/talks/blob/main/2023-05-17/2023-05-17-github-notifications-en.pdf?raw=true"
+status = 302
+
+[[redirects]]
+from = "/2023-05-17/pdf"
+to = "https://github.com/antfu/talks/blob/main/2023-05-17/2023-05-17-github-notifications-en.pdf?raw=true"
+status = 302
+
+[[redirects]]
+from = "/2023/github-notifications/src"
+to = "https://github.com/antfu/talks/tree/main/2023-05-17"
+status = 302
+
+[[redirects]]
+from = "2023-05-17"
+to = "https://talks.antfu.me/2023/github-notifications/"
+status = 301
+
+[[redirects]]
+from = "/2023/github-notifications/*"
+to = "/2023/github-notifications/index.html"
+status = 200
+
+[[redirects]]
+from = "/2023/nuxt-devtools-strasbourg/pdf"
+to = "https://github.com/antfu/talks/blob/main/2023-05-25/2023-05-25-nuxt-devtools-strasbourg-en.pdf?raw=true"
+status = 302
+
+[[redirects]]
+from = "/2023-05-25/pdf"
+to = "https://github.com/antfu/talks/blob/main/2023-05-25/2023-05-25-nuxt-devtools-strasbourg-en.pdf?raw=true"
+status = 302
+
+[[redirects]]
+from = "/2023/nuxt-devtools-strasbourg/src"
+to = "https://github.com/antfu/talks/tree/main/2023-05-25"
+status = 302
+
+[[redirects]]
+from = "2023-05-25"
+to = "https://talks.antfu.me/2023/nuxt-devtools-strasbourg/"
+status = 301
+
+[[redirects]]
+from = "/2023/nuxt-devtools-strasbourg/*"
+to = "/2023/nuxt-devtools-strasbourg/index.html"
+status = 200
+
+
+[[redirects]]
+from = "/"
+to = "https://antfu.me/talks"
+status = 302
