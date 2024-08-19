@@ -34,7 +34,7 @@ glowY: 90
 style: 'padding-left: 8rem;'
 ---
 
-# Anthony Fu
+# Kathiravan K
 
 <div class="leading-10 opacity-80">
 Core team member of Vue, Vite and Nuxt.<br>
