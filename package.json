@@ -6,10 +6,10 @@
     "build": "rimraf dist && pnpm -r run build",
     "dev": "esno scripts/picker.ts dev --open",
     "export": "esno scripts/picker.ts export",
+    "exportToPpt": "esno scripts/picker.ts exportToPpt",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",
-    "update": "esno scripts/redirects.ts",
-    "prepare": "git submodule update --init --recursive"
+    "update": "esno scripts/redirects.ts"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.26.0",

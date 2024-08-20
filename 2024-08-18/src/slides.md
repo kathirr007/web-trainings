@@ -1,5 +1,7 @@
 --- Introduction
 layout: cover
+title: Vue.js Training
+titleTemplate: 'Capgemini | %s'
 highlighter: shiki
 css: unocss
 colorSchema: dark
@@ -22,9 +24,8 @@ export:
 Kathiravan K
 </div>
 
-<div abs-br mx-10 my-12 flex="~ col" text-sm text-right>
-  <div>Capgemini</div>
-  <!-- <div text-sm opacity-50>Sep. 25th 2023</div> -->
+<div abs-br m-3 flex="~ col" text-sm text-right>
+  <img src="/images/capgemini-logo.png" />
 </div>
 
 ---
@@ -36,24 +37,22 @@ style: 'padding-left: 8rem;'
 
 # Kathiravan K
 
-<div class="leading-10 opacity-80">
-Core team member of Vue, Vite and Nuxt.<br>
-Creator of VueUse, Vitest, UnoCSS, Slidev and Elk.<br>
-Working at NuxtLabs.<br>
+<div class="w-60% opacity-80">
+Senior Software Engineer
+With 11+ Years of experience in Web and UI Development
+And 5+ Years of experience in Vue.js.
 </div>
 
 <div my-10 w-min flex="~ gap-1" items-center justify-center>
   <div i-ri-user-3-line op50 ma text-xl/>
-  <div><a href="https://antfu.me" target="_blank" class="border-none! font-300">antfu.me</a></div>
+  <div><a href="https://kathirr007.vercel.app/" target="_blank" class="border-none! font-300">kathirr007</a></div>
   <div i-ri-github-line op50 ma text-xl ml4/>
-  <div><a href="https://github.com/antfu" target="_blank" class="border-none! font-300">antfu</a></div>
-  <div i-ri-mastodon-line op50 ma text-xl ml4/>
-  <div><a href="https://m.webtoo.ls/@antfu" target="_blank" class="border-none! font-300">antfu@webtoo.ls</a></div>
+  <div><a href="https://github.com/kathirr007" target="_blank" class="border-none! font-300">kathirr007</a></div>
   <div i-ri-twitter-line op50 ma text-xl ml4/>
-  <div><a href="https://twitter.com/antfu7" target="_blank" class="border-none! font-300">antfu7</a></div>
+  <div><a href="https://x.com/kathirr_007" target="_blank" class="border-none! font-300">kathirr_007</a></div>
 </div>
 
-<img src="https://antfu.me/avatar.png" rounded-full w-35 abs-tr mt-32 mr-40/>
+<img src="https://gravatar.com/avatar/a5630d956d792e81b5f9a60f7d65e1d0?size=320" rounded-full w-35 abs-tr mt-32 mr-40/>
 
 <div flex="~ gap2">
 
