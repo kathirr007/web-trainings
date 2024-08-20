@@ -35,6 +35,9 @@ importers:
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
+      dayjs:
+        specifier: ^1.11.13
+        version: 1.11.13
       eslint:
         specifier: ^9.9.0
         version: 9.9.0(jiti@1.21.6)

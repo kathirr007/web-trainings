@@ -59,6 +59,21 @@ And 5+ Years of experience in Vue.js.
 </div>
 
 ---
+layout: full
+glowX: 0
+glowY: 90
+style: 'padding-left: 8rem;'
+---
+
+<h2 mb-4>Day 1 - Agenda</h2>
+<ul>
+  <li><a href="/4">Before Rust</a></li>
+  <li><a href="/5">Rust</a></li>
+</ul>
+
+<SharedCopyright />
+
+---
 layout: center
 glowX: 50
 glowY: 50
