@@ -81,7 +81,7 @@ ${redirects}
 
 [[redirects]]
 from = "/"
-to = "https://antfu.me/talks"
+to = "https://kathirr007-web-trainings.netlify.app"
 status = 302
 `
 
