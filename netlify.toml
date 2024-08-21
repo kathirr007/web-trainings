@@ -39,7 +39,7 @@ to = "/2023/nuxt-devtools-strasbourg/index.html"
 status = 200
 
 [[redirects]]
-from = "/2023/nuxt-devtools-strasbourg/pdf"
+from = "/2024/vue-js-training/pdf"
 to = "https://github.com/antfu/talks/blob/main/2024-08-18/2023-05-25-nuxt-devtools-strasbourg-en.pdf?raw=true"
 status = 302
 
@@ -49,21 +49,21 @@ to = "https://github.com/antfu/talks/blob/main/2024-08-18/2023-05-25-nuxt-devtoo
 status = 302
 
 [[redirects]]
-from = "/2023/nuxt-devtools-strasbourg/src"
+from = "/2024/vue-js-training/src"
 to = "https://github.com/antfu/talks/tree/main/2024-08-18"
 status = 302
 
 [[redirects]]
 from = "2024-08-18"
-to = "https://talks.antfu.me/2023/nuxt-devtools-strasbourg/"
+to = "https://talks.antfu.me/2024/vue-js-training/"
 status = 301
 
 [[redirects]]
-from = "/2023/nuxt-devtools-strasbourg/*"
-to = "/2023/nuxt-devtools-strasbourg/index.html"
+from = "/2024/vue-js-training/*"
+to = "/2024/vue-js-training/index.html"
 status = 200
 
 [[redirects]]
 from = "/"
-to = "https://antfu.me/talks"
+to = "https://kathirr007-web-trainings.netlify.app"
 status = 302
