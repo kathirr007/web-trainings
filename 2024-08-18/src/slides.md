@@ -2,6 +2,7 @@
 layout: cover
 title: Vue.js Training
 titleTemplate: 'Capgemini | %s'
+favicon: "/images/capgemini-logo-icon.png"
 highlighter: shiki
 css: unocss
 colorSchema: dark

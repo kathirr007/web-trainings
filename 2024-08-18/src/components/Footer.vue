@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import dayjs from 'dayjs'
-import { onSlideEnter, onSlideLeave, useDarkMode, useIsSlideActive, useNav, useSlideContext } from '@slidev/client'
+import { useSlideContext } from '@slidev/client'
 
 const { $slidev } = useSlideContext()
 </script>
