@@ -1,7 +1,7 @@
 --- Introduction
 layout: cover
 title: Vue.js Training
-titleTemplate: 'Capgemini | %s'
+titleTemplate: '%s | Capgemini'
 favicon: "/images/capgemini-logo-icon.png"
 highlighter: shiki
 css: unocss
@@ -63,14 +63,216 @@ And 5+ Years of experience in Vue.js.
 layout: full
 glowX: 0
 glowY: 90
-style: 'padding-left: 8rem;'
 ---
 
 <h2 mb-4>Day 1 - Agenda</h2>
 <ul>
-  <li><a href="/4">Before Rust</a></li>
-  <li><a href="/5">Rust</a></li>
+  <li><a href="/4">Introduction</a></li>
+  <li><a href="/5">Get Started</a></li>
 </ul>
+
+<SharedCopyright />
+
+---
+layout: full
+glowX: 0
+glowY: 90
+---
+
+<h2 mb-4>Introduction</h2>
+<h3 mb-2>What is Vue?</h3>
+<p text-sm leading-tight>
+  Vue (pronounced /vjuː/, like view) is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative, component-based programming model that helps you efficiently develop user interfaces of any complexity.
+</p>
+
+<div text-xs leading-tight max-h-300px overflow-auto my-4>
+
+  <p text-sm mt-3>Here is a minimal example:</p>
+
+  ```js {*}{lines:true}
+  import { createApp } from 'vue'
+  createApp({
+    data() {
+      return {
+        count: 0
+      }
+    }
+  }).mount('#app')
+  ```
+  ```html
+  <div id="app">
+    <button @click="count++">
+      Count is: {{ count }}
+    </button>
+  </div>
+  ```
+  <p text-sm class="!mb-0">Result:</p>
+
+  <SimpleCounter />
+
+  <div my-3>
+    <div class="text-sm mb-2">
+      The above example demonstrates the two core features of Vue:
+    </div>
+    <ul>
+      <li>Declarative Rendering: Vue extends standard HTML with a template syntax that allows us to declaratively describe HTML output based on JavaScript state.</li>
+      <li>Reactivity: Vue automatically tracks JavaScript state changes and efficiently updates the DOM when changes happen.</li>
+    </ul>
+  </div>
+</div>
+
+<SharedCopyright />
+
+<style scoped>
+p {
+  margin: 0;
+}
+</style>
+---
+layout: full
+glowX: 0
+glowY: 90
+---
+
+<h2 mb-4>Introduction</h2>
+<h3 mb-2>The Progressive Framework</h3>
+<div class="text-sm leading-normal">Vue is a framework and ecosystem that covers most of the common features needed in frontend development. But the web is extremely diverse - the things we build on the web may vary drastically in form and scale. With that in mind, Vue is designed to be flexible and incrementally adoptable. Depending on your use case, Vue can be used in different ways:</div>
+
+<div text-sm leading-normal max-h-300px overflow-auto my-4 flex="~ col gap-2">
+  <ul class="">
+    <li v-click>Enhancing static HTML without a build step</li>
+    <li v-click>Embedding as Web Components on any page</li>
+    <li v-click>Single-Page Application (SPA)</li>
+    <li v-click>Fullstack / Server-Side Rendering (SSR)</li>
+    <li v-click>Jamstack / Static Site Generation (SSG)</li>
+    <li v-click>Targeting desktop, mobile, WebGL, and even the terminal</li>
+  </ul>
+  <div v-click>If you are an experienced developer interested in how to best integrate Vue into your stack, or you are curious about what these terms mean, we discuss them in more detail in <a target="_blank" text-emerald-400 href="https://vuejs.org/guide/extras/ways-of-using-vue.html">Ways of Using Vue</a>.</div>
+
+  <div v-click>Despite the flexibility, the core knowledge about how Vue works is shared across all these use cases. Even if you are just a beginner now, the knowledge gained along the way will stay useful as you grow to tackle more ambitious goals in the future. If you are a veteran, you can pick the optimal way to leverage Vue based on the problems you are trying to solve, while retaining the same productivity. This is why we call Vue "The Progressive Framework": it's a framework that can grow with you and adapt to your needs.</div>
+</div>
+
+<SharedCopyright />
+
+<style scoped>
+p {
+  margin: 0;
+}
+</style>
+---
+layout: full
+glowX: 0
+glowY: 90
+---
+
+<h2 mb-4>Introduction</h2>
+<h3 mb-2>Single File Component</h3>
+<div class="text-sm leading-normal">
+  In most build-tool-enabled Vue projects, we author Vue components using an HTML-like file format called Single-File Component (also known as *.vue files, abbreviated as SFC). A Vue SFC, as the name suggests, encapsulates the component's logic (JavaScript), template (HTML), and styles (CSS) in a single file. Here's the previous example, written in SFC format:
+</div>
+
+<div text-sm leading-normal max-h-300px overflow-auto my-4 flex="~ col gap-2">
+<div v-click>
+<h5>SFC Example for Options API</h5>
+```html
+<script>
+export default {
+  data() {
+    return {
+      count: 0
+    }
+  }
+}
+</script>
+
+<template>
+  <button @click="count++">Count is: {{ count }}</button>
+</template>
+
+<style scoped>
+button {
+  font-weight: bold;
+}
+</style>
+```
+</div>
+
+<div v-click>
+<h5>SFC Example for Composition API</h5>
+```html
+<script setup>
+import { ref } from 'vue'
+const count = ref(0)
+</script>
+
+<template>
+  <button @click="count++">Count is: {{ count }}</button>
+</template>
+
+<style scoped>
+button {
+  font-weight: bold;
+}
+</style>
+```
+</div>
+</div>
+
+<SharedCopyright />
+---
+layout: full
+glowX: 0
+glowY: 90
+---
+
+<h2 mb-4>Introduction</h2>
+<h3 mb-2>API Styles</h3>
+<div class="text-sm leading-normal">
+  Vue components can be authored in two different API styles: <strong text-emerald-400>Options API</strong> and <strong text-emerald-400>Composition API</strong>.
+</div>
+
+<div text-sm leading-normal max-h-300px overflow-auto my-4 flex="~ col gap-2">
+<div v-click>
+<h5 text-lg mb-2>Options API</h5>
+<div text-sm leading-normal>
+  With Options API, we define a component's logic using an object of options such as <kbd>data</kbd>, <kbd>methods</kbd>, and <kbd>mounted</kbd>. Properties defined by options are exposed on this inside functions, which points to the component instance:
+</div>
+<div v-click>
+```vue
+<script>
+export default {
+  // Properties returned from data() become reactive state
+  // and will be exposed on `this`.
+  data() {
+    return {
+      count: 0
+    }
+  },
+
+  // Methods are functions that mutate state and trigger updates.
+  // They can be bound as event handlers in templates.
+  methods: {
+    increment() {
+      this.count++
+    }
+  },
+
+  // Lifecycle hooks are called at different stages
+  // of a component's lifecycle.
+  // This function will be called when the component is mounted.
+  mounted() {
+    console.log(`The initial count is ${this.count}.`)
+  }
+}
+</script>
+
+<template>
+  <button @click="increment">Count is: {{ count }}</button>
+</template>
+```
+</div>
+</div>
+</div>
 
 <SharedCopyright />
 
