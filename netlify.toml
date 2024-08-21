@@ -10,12 +10,12 @@ PLAYWRIGHT_BROWSERS_PATH = "0"
 
 [[redirects]]
 from = "/2023/github-notifications/src"
-to = "https://github.com/antfu/talks/tree/main/2023-05-17"
+to = "https://github.com/kathirr007/web-trainings/tree/main/2023-05-17"
 status = 302
 
 [[redirects]]
 from = "2023-05-17"
-to = "https://talks.antfu.me/2023/github-notifications/"
+to = "https://kathirr007-web-trainings.netlify.app/2023/github-notifications/"
 status = 301
 
 [[redirects]]
@@ -25,12 +25,12 @@ status = 200
 
 [[redirects]]
 from = "/2023/nuxt-devtools-strasbourg/src"
-to = "https://github.com/antfu/talks/tree/main/2023-05-25"
+to = "https://github.com/kathirr007/web-trainings/tree/main/2023-05-25"
 status = 302
 
 [[redirects]]
 from = "2023-05-25"
-to = "https://talks.antfu.me/2023/nuxt-devtools-strasbourg/"
+to = "https://kathirr007-web-trainings.netlify.app/2023/nuxt-devtools-strasbourg/"
 status = 301
 
 [[redirects]]
@@ -40,22 +40,22 @@ status = 200
 
 [[redirects]]
 from = "/2024/vue-js-training/pdf"
-to = "https://github.com/antfu/talks/blob/main/2024-08-18/2023-05-25-nuxt-devtools-strasbourg-en.pdf?raw=true"
+to = "https://github.com/kathirr007/web-trainings/blob/main/2024-08-18/2023-05-25-nuxt-devtools-strasbourg-en.pdf?raw=true"
 status = 302
 
 [[redirects]]
 from = "/2024-08-18/pdf"
-to = "https://github.com/antfu/talks/blob/main/2024-08-18/2023-05-25-nuxt-devtools-strasbourg-en.pdf?raw=true"
+to = "https://github.com/kathirr007/web-trainings/blob/main/2024-08-18/2023-05-25-nuxt-devtools-strasbourg-en.pdf?raw=true"
 status = 302
 
 [[redirects]]
 from = "/2024/vue-js-training/src"
-to = "https://github.com/antfu/talks/tree/main/2024-08-18"
+to = "https://github.com/kathirr007/web-trainings/tree/main/2024-08-18"
 status = 302
 
 [[redirects]]
 from = "2024-08-18"
-to = "https://talks.antfu.me/2024/vue-js-training/"
+to = "https://kathirr007-web-trainings.netlify.app/2024/vue-js-training/"
 status = 301
 
 [[redirects]]

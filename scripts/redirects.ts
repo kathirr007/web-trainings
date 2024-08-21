@@ -38,25 +38,25 @@ const redirects = bases
       parts.push(`
 [[redirects]]
 from = "${base}pdf"
-to = "https://github.com/antfu/talks/blob/main/${dir}/${pdfFile}?raw=true"
+to = "https://github.com/kathirr007/web-trainings/blob/main/${dir}/${pdfFile}?raw=true"
 status = 302
 
 [[redirects]]
 from = "/${dir}/pdf"
-to = "https://github.com/antfu/talks/blob/main/${dir}/${pdfFile}?raw=true"
+to = "https://github.com/kathirr007/web-trainings/blob/main/${dir}/${pdfFile}?raw=true"
 status = 302`)
     }
 
     parts.push(`
 [[redirects]]
 from = "${base}src"
-to = "https://github.com/antfu/talks/tree/main/${dir}"
+to = "https://github.com/kathirr007/web-trainings/tree/main/${dir}"
 status = 302`)
 
     parts.push(`
 [[redirects]]
 from = "${dir}"
-to = "https://talks.antfu.me${base}"
+to = "https://kathirr007-web-trainings.netlify.app${base}"
 status = 301
 
 [[redirects]]
