@@ -86,4 +86,5 @@ watchEffect(() => {
     }"
     @transitionend="updateClass"
   />
+  <SharedCopyright />
 </template>

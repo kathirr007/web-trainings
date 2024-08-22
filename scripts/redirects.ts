@@ -3,7 +3,7 @@ import { dirname, resolve } from 'node:path'
 import process from 'node:process'
 import fg from 'fast-glob'
 
-const packageFiles = (await fg('*/src/package.json', {
+const packageFiles = (await fg('*/src/package.json|trainings/package.json', {
   onlyFiles: true,
 })).sort()
 
@@ -81,7 +81,7 @@ ${redirects}
 
 [[redirects]]
 from = "/"
-to = "https://kathirr007-web-trainings.netlify.app"
+to = "https://kathirr007-web-trainings.netlify.app/trainings"
 status = 302
 `
 

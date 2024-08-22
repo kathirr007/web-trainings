@@ -71,7 +71,7 @@ glowY: 90
   <li><a href="/5">Get Started</a></li>
 </ul>
 
-<SharedCopyright />
+<!-- <SharedCopyright /> -->
 
 ---
 layout: full
@@ -121,7 +121,7 @@ glowY: 90
   </div>
 </div>
 
-<SharedCopyright />
+<!-- <SharedCopyright /> -->
 
 <style scoped>
 p {
@@ -152,7 +152,7 @@ glowY: 90
   <div v-click>Despite the flexibility, the core knowledge about how Vue works is shared across all these use cases. Even if you are just a beginner now, the knowledge gained along the way will stay useful as you grow to tackle more ambitious goals in the future. If you are a veteran, you can pick the optimal way to leverage Vue based on the problems you are trying to solve, while retaining the same productivity. This is why we call Vue "The Progressive Framework": it's a framework that can grow with you and adapt to your needs.</div>
 </div>
 
-<SharedCopyright />
+<!-- <SharedCopyright /> -->
 
 <style scoped>
 p {
@@ -218,7 +218,7 @@ button {
 </div>
 </div>
 
-<SharedCopyright />
+<!-- <SharedCopyright /> -->
 ---
 layout: full
 glowX: 0
@@ -274,7 +274,7 @@ export default {
 </div>
 </div>
 
-<SharedCopyright />
+<!-- <SharedCopyright /> -->
 
 ---
 layout: center

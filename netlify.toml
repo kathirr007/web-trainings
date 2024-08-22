@@ -64,6 +64,21 @@ to = "/2024/vue-js-training/index.html"
 status = 200
 
 [[redirects]]
+from = "/trainings/src"
+to = "https://github.com/kathirr007/web-trainings/tree/main/."
+status = 302
+
+[[redirects]]
+from = "."
+to = "https://kathirr007-web-trainings.netlify.app/trainings/"
+status = 301
+
+[[redirects]]
+from = "/trainings/*"
+to = "/trainings/index.html"
+status = 200
+
+[[redirects]]
 from = "/"
-to = "https://kathirr007-web-trainings.netlify.app"
+to = "https://kathirr007-web-trainings.netlify.app/trainings/"
 status = 302

@@ -11,6 +11,9 @@
     "lint": "eslint .",
     "update": "esno scripts/redirects.ts"
   },
+  "dependencies": {
+    "vue": "^3.4.37"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^2.26.0",
     "@eslint/config-inspector": "^0.5.4",
@@ -21,6 +24,7 @@
     "@types/node": "^22.4.1",
     "@types/prompts": "^2.4.9",
     "@types/seedrandom": "^3.0.8",
+    "@vitejs/plugin-vue": "^5.1.2",
     "dayjs": "^1.11.13",
     "eslint": "^9.9.0",
     "eslint-plugin-format": "^0.1.2",
@@ -37,6 +41,7 @@
     "taze": "^0.16.6",
     "typescript": "^5.5.4",
     "unocss": "^0.62.2",
+    "vite": "^5.4.1",
     "vue-router": "^4.4.3",
     "vue-tsc": "^2.0.29"
   }

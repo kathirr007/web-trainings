@@ -8,7 +8,7 @@ async function startPicker(args: string[]) {
   const folders = (await fs.readdir(new URL('..', import.meta.url), { withFileTypes: true }))
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name)
-    .filter(folder => folder.match(/^\d{4}-/))
+    .filter(folder => folder.match(/^\d{4}-|trainings/))
     .sort((a, b) => -a.localeCompare(b))
 
   const result = args.includes('-y')
@@ -25,10 +25,11 @@ async function startPicker(args: string[]) {
   args = args.filter(arg => arg !== '-y')
 
   if (result.folder) {
-    if (args[0] === 'dev')
+    console.log(result.folder)
+    if (args[0] === 'dev' && result.folder !== 'trainings')
       execa('code', [fileURLToPath(new URL(`../${result.folder}/src/slides.md`, import.meta.url))])
     await execa('pnpm', ['run', ...args], {
-      cwd: new URL(`../${result.folder}/src`, import.meta.url),
+      cwd: result.folder !== 'trainings' ? new URL(`../${result.folder}/src`, import.meta.url) : new URL(`../${result.folder}`, import.meta.url),
       stdio: 'inherit',
     })
   }
