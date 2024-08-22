@@ -80,5 +80,5 @@ status = 200
 
 [[redirects]]
 from = "/"
-to = "https://kathirr007-web-trainings.netlify.app/trainings/"
+to = "https://kathirr007-web-trainings.netlify.app/trainings"
 status = 302
