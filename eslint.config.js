@@ -14,4 +14,9 @@ export default antfu({
   ignores: [
     '**/demo/eslint/**',
   ],
+}, {
+  rules: {
+    'no-console': 'off',
+    'no-debugger': 'off',
+  },
 })

@@ -7,6 +7,7 @@ highlighter: shiki
 css: unocss
 colorSchema: dark
 transition: fade-out
+mdc: true
 download: true
 export:
   format: pdf
@@ -68,15 +69,15 @@ glowY: 90
 <h2 mb-4>Day 1 - Agenda</h2>
 <ul>
   <li><a href="/4">Introduction</a></li>
-  <li><a href="/5">Get Started</a></li>
+  <li><a href="/11">Quick Start</a></li>
 </ul>
 
 <!-- <SharedCopyright /> -->
 
 ---
 layout: full
-glowX: 0
-glowY: 90
+glowX: 90
+glowY: 0
 ---
 
 <h2 mb-4>Introduction</h2>
@@ -174,55 +175,33 @@ glowY: 90
 <div text-sm leading-normal max-h-300px overflow-auto my-4 flex="~ col gap-2">
 <div v-click>
 <h5>SFC Example for Options API</h5>
-```html
-<script>
-export default {
-  data() {
-    return {
-      count: 0
-    }
-  }
-}
-</script>
 
-<template>
-  <button @click="count++">Count is: {{ count }}</button>
-</template>
+<<< @/snippets/SFC-OptionsAPI.vue vue
 
-<style scoped>
-button {
-  font-weight: bold;
-}
-</style>
-```
-</div>
-
-<div v-click>
-<h5>SFC Example for Composition API</h5>
-```html
-<script setup>
-import { ref } from 'vue'
-const count = ref(0)
-</script>
-
-<template>
-  <button @click="count++">Count is: {{ count }}</button>
-</template>
-
-<style scoped>
-button {
-  font-weight: bold;
-}
-</style>
-```
 </div>
 </div>
-
-<!-- <SharedCopyright /> -->
 ---
 layout: full
 glowX: 0
 glowY: 90
+---
+
+<h2 mb-4>Introduction</h2>
+<h3 mb-2>Single File Component Cont<span tracking-wider> ...</span></h3>
+
+<div text-sm leading-normal max-h-300px overflow-auto my-4 flex="~ col gap-2">
+<div v-click>
+<h5>SFC Example for Composition API</h5>
+
+<<< @/snippets/SFC-CompositionAPI.vue vue
+
+</div>
+</div>
+
+---
+layout: full
+glowX: 100
+glowY: 50
 ---
 
 <h2 mb-4>Introduction</h2>
@@ -235,46 +214,138 @@ glowY: 90
 <div v-click>
 <h5 text-lg mb-2>Options API</h5>
 <div text-sm leading-normal>
-  With Options API, we define a component's logic using an object of options such as <kbd>data</kbd>, <kbd>methods</kbd>, and <kbd>mounted</kbd>. Properties defined by options are exposed on this inside functions, which points to the component instance:
+  With Options API, we define a component's logic using an object of options such as <code text-emerald-400>data</code>, <code text-emerald-400>methods</code>, and <code text-emerald-400>mounted</code>. Properties defined by options are exposed on this inside functions, which points to the component instance:
 </div>
-<div v-click>
-```vue
-<script>
-export default {
-  // Properties returned from data() become reactive state
-  // and will be exposed on `this`.
-  data() {
-    return {
-      count: 0
-    }
-  },
+<<< @/snippets/APIStyle-OptionsAPI.vue vue
+</div>
+</div>
+---
+layout: full
+glowX: 100
+glowY: 50
+---
 
-  // Methods are functions that mutate state and trigger updates.
-  // They can be bound as event handlers in templates.
-  methods: {
-    increment() {
-      this.count++
-    }
-  },
+<h2 mb-4>Introduction</h2>
+<h3 mb-2>API Styles Cont <span tracking-wider>...</span></h3>
 
-  // Lifecycle hooks are called at different stages
-  // of a component's lifecycle.
-  // This function will be called when the component is mounted.
-  mounted() {
-    console.log(`The initial count is ${this.count}.`)
-  }
-}
-</script>
+<div text-sm leading-normal max-h-300px overflow-auto my-4 flex="~ col gap-2">
+<div flex="~ col gap-2" v-click>
+<h5 text-lg mb-2>Composition API</h5>
+<div text-sm leading-normal>
+  With Composition API, we define a component's logic using imported API functions. In SFCs, Composition API is typically used with <code text-emerald-400>&lt;script setup&gt;</code>. The <code text-emerald-400>setup</code> attribute is a hint that makes Vue perform compile-time transforms that allow us to use Composition API with less boilerplate. For example, imports and top-level variables / functions declared in <code text-emerald-400>&lt;script setup&gt;</code> are directly usable in the template.
+</div>
+<div>
+  Here is the same component, with the exact same template, but using Composition API and <code text-emerald-400>&lt;script setup&gt;</code> instead:
+</div>
+<<< @/snippets/APIStyle-CompositionAPI.vue vue
+</div>
+</div>
+---
+layout: full
+glowX: 100
+glowY: 50
+---
 
-<template>
-  <button @click="increment">Count is: {{ count }}</button>
-</template>
+<h2 mb-4>Introduction</h2>
+<h3 mb-2>Which to Choose?</h3>
+
+<div text-sm leading-normal max-h-300px overflow-auto my-4 flex="~ col gap-2">
+<div>Both API styles are fully capable of covering common use cases. They are different interfaces powered by the exact same underlying system. In fact, the Options API is implemented on top of the Composition API! The fundamental concepts and knowledge about Vue are shared across the two styles.</div>
+
+<div>The Options API is centered around the concept of a "component instance" (this as seen in the example), which typically aligns better with a class-based mental model for users coming from OOP language backgrounds. It is also more beginner-friendly by abstracting away the reactivity details and enforcing code organization via option groups.</div>
+
+<div>The Composition API is centered around declaring reactive state variables directly in a function scope and composing state from multiple functions together to handle complexity. It is more free-form and requires an understanding of how reactivity works in Vue to be used effectively. In return, its flexibility enables more powerful patterns for organizing and reusing logic.</div>
+
+<div>You can learn more about the comparison between the two styles and the potential benefits of Composition API in the <a text-emerald-400 target="_blank" href="https://vuejs.org/guide/extras/composition-api-faq.html">Composition API FAQ</a>.</div>
+
+<div>If you are new to Vue, here's our general recommendation:</div>
+
+<div>For learning purposes, go with the style that looks easier to understand to you. Again, most of the core concepts are shared between the two styles. You can always pick up the other style later.</div>
+
+<div>For production use:</div>
+
+<ul>
+  <li>Go with Options API if you are not using build tools, or plan to use Vue primarily in low-complexity scenarios, e.g. progressive enhancement.</li>
+
+  <li>Go with Composition API + Single-File Components if you plan to build full applications with Vue.</li>
+</ul>
+</div>
+---
+layout: full
+glowX: 50
+glowY: 100
+---
+
+<h2 mb-4>Quick Start</h2>
+<div text-sm leading-normal max-h-300px overflow-auto my-4 flex="~ col gap-2">
+<h3>Try Vue Online</h3>
+<ul>
+  <li>To quickly get a taste of Vue, you can try it directly in our <a href="https://play.vuejs.org/#eNo9jcEKwjAMhl/lt5fpQYfXUQfefAMvvRQbddC1pUuHUPrudg4HIcmXjyRZXEM4zYlEJ+T0iEPgXjn6BB8Zhp46WUZWDjCa9f6w9kAkTtH9CRinV4fmRtZ63H20Ztesqiylphqy3R5UYBqD1UyVAPk+9zkvV1CKbCv9poMLiTEfR2/IXpSoXomqZLtti/IFwVtA9A==" target="_blank" text-emerald-400 inline-flex items-center gap-1><span i-material-symbols:play-circle-outline-rounded text-emerald-400 /> Playground</a></li>
+
+  <li>If you prefer a plain HTML setup without any build steps, you can use this <a href="https://jsfiddle.net/yyx990803/2ke1ab0z/" target="_blank" text-emerald-400>JSFiddle</a> as your starting point.</li>
+
+  <li>If you are already familiar with Node.js and the concept of build tools, you can also try a complete build setup right within your browser on <a href="https://vite.new/vue" target="_blank" text-emerald-400>StackBlitz</a></li>
+</ul>
+</div>
+---
+layout: full
+glowX: 50
+glowY: 100
+---
+
+<h2 mb-4>Quick Start</h2>
+<div text-sm leading-normal max-h-500px overflow-auto my-4 flex="~ col gap-2">
+<h3>Creating a Vue Application</h3>
+<div class="border border-emerald-400 p-4 rounded-md">
+  <div text-base flex gap-2 items-center text-emerald-400>
+    <span i-mdi:information-outline /> <span>Prerequisites</span>
+  </div>
+
+  <ul ml-3>
+    <li>Familiarity with the command line</li>
+    <li>Install Node.js version 18.3 or higher</li>
+  </ul>
+</div>
+<div>In this section we will introduce how to scaffold a <a target="_blank" text-emerald-400 href="https://vuejs.org/guide/extras/ways-of-using-vue.html#single-page-application-spa">Vue Single Page Application</a> on your local machine. The created project will be using a build setup based on <a target="_blank" text-emerald-400 href="https://vitejs.dev/">Vite</a> and allow us to use <a target="_blank" text-emerald-400 href="https://vuejs.org/guide/scaling-up/sfc.html">Vue Single-File Components</a> (SFCs).</div>
+
+<div>Make sure you have an up-to-date version of <a target="_blank" text-emerald-400 href="https://nodejs.org/">Node.js</a> installed and your current working directory is the one where you intend to create a project. Run the following command in your command line</div>
+<ul p-0 m-0 class="list-none">
+  <li flex items-center gap-2 v-click>
+  <code text-emerald-400>npm</code>:
+```bash
+npm create vue@latest
 ```
-</div>
-</div>
+  </li>
+  <li flex items-center gap-2 v-click>
+  <code text-emerald-400>pnpm</code>:
+```bash
+pnpm create vue@latest
+```
+  </li>
+  <li flex items-center gap-2 v-click>
+  <code text-emerald-400>yarn</code>:
+For Yarn Modern (v2+)
+```bash
+yarn create vue@latest
+```
+For Yarn ^v4.11
+```bash
+yarn dlx create-vue@latest
+```
+
+  </li>
+</ul>
 </div>
 
-<!-- <SharedCopyright /> -->
+<style scoped>
+  ul.list-none {
+    list-style: none;
+  }
+  ul.list-none li {
+    margin: 0px;
+    padding: 0px;
+  }
+</style>
 
 ---
 layout: center
