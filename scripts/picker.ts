@@ -26,10 +26,12 @@ async function startPicker(args: string[]) {
 
   if (result.folder) {
     console.log(result.folder)
-    if (args[0] === 'dev' && result.folder !== 'trainings')
+    // if (args[0] === 'dev' && result.folder !== 'trainings')
+    if (args[0] === 'dev')
       execa('code', [fileURLToPath(new URL(`../${result.folder}/src/slides.md`, import.meta.url))])
     await execa('pnpm', ['run', ...args], {
-      cwd: result.folder !== 'trainings' ? new URL(`../${result.folder}/src`, import.meta.url) : new URL(`../${result.folder}`, import.meta.url),
+      /* cwd: result.folder !== 'trainings' ? new URL(`../${result.folder}/src`, import.meta.url) : new URL(`../${result.folder}`, import.meta.url), */
+      cwd: new URL(`../${result.folder}/src`, import.meta.url),
       stdio: 'inherit',
     })
   }

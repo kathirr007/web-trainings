@@ -1,7 +1,7 @@
 
 [build]
 publish = "dist"
-command = "cd trainings && pnpm i && cd .. && pnpm run build"
+command = "pnpm run build"
 
 [build.environment]
 NODE_VERSION = "20"
@@ -65,11 +65,11 @@ status = 200
 
 [[redirects]]
 from = "/trainings/src"
-to = "https://github.com/kathirr007/web-trainings/tree/main/."
+to = "https://github.com/kathirr007/web-trainings/tree/main/trainings"
 status = 302
 
 [[redirects]]
-from = "."
+from = "trainings"
 to = "https://kathirr007-web-trainings.netlify.app/trainings/"
 status = 301
 
