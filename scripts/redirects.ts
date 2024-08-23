@@ -71,7 +71,7 @@ status = 200`)
 const content = `
 [build]
 publish = "dist"
-command = "pnpm run build"
+command = "pnpm i && pnpm run build"
 
 [build.environment]
 NODE_VERSION = "20"
