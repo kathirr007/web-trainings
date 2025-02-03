@@ -1,4 +1,4 @@
-# Trainings
+# Web Trainings
 
 Slides &amp; code for trainings, using [Slidev](https://sli.dev).
 
